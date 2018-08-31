@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 /**
@@ -37,9 +39,12 @@ class DestinoAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         DestinosViewHolder destinosHolder = (DestinosViewHolder) viewHolder;
-        destinosHolder.iv_foto.setImageResource(destinos.get(position).getFoto());
-        destinosHolder.tv_pais.setText(destinos.get(position).getPais() );
-        destinosHolder.tv_cidade.setText(destinos.get(position).getCidade() );
+
+        // DestinosViewHolder destinosHolder =
+        //destinosHolder.iv_foto.setImageResource(destinos.get(position).getFoto());
+        Picasso.with(context).load(destinos.get(position).getFoto()).resize(240, 120).into(((DestinosViewHolder) viewHolder).iv_foto);
+        destinosHolder.tv_pais.setText(destinos.get(position).getPais());
+        destinosHolder.tv_cidade.setText(destinos.get(position).getCidade());
         destinosHolder.tv_photoBy.setText(destinos.get(position).getPhotoBy());
 
     }
@@ -66,10 +71,10 @@ class DestinoAdapter extends RecyclerView.Adapter {
 
         public DestinosViewHolder(View itemView) {
             super(itemView);
-            tv_pais    = (TextView)itemView.findViewById(R.id.tv_pais);
-            tv_cidade  = (TextView)itemView.findViewById(R.id.tv_cidade);
-            tv_photoBy = (TextView)itemView.findViewById(R.id.tv_photoBy);
-            iv_foto    = (ImageView) itemView.findViewById(R.id.iv_destino);
+            tv_pais    = itemView.findViewById(R.id.tv_pais);
+            tv_cidade  = itemView.findViewById(R.id.tv_cidade);
+            tv_photoBy = itemView.findViewById(R.id.tv_photoBy);
+            iv_foto    = itemView.findViewById(R.id.iv_destino);
         }
     }
 }
