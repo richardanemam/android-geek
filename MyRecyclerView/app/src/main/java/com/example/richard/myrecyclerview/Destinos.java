@@ -10,7 +10,6 @@ public class Destinos {
     private String photoBy;
     private int foto;
 
-    Destinos(){}
     Destinos(String pais, String cidade, String photoBy, int foto){
         this.setPais(pais);
         this.setCidade(cidade);
