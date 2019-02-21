@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IMCSimulator</string>
+    <string name="peso_label">Peso</string>
+    <string name="kilograma">Kg</string>
+    <string name="altura_label">Altura</string>
+    <string name="centimetro">cm</string>
+    <string name="imc_label">IMC</string>
+    <string name="imc_status">Classificação IMC</string>
+    <string name="consequencia">o que pode acontecer</string>
+    <string name="muito_abaixo">muito abaixo do peso</string>
+    <string name="abaixo">abaixo do peso</string>
+    <string name="normal">peso normal</string>
+    <string name="acima">acima do peso</string>
+    <string name="obesidade_um">obesidade grau I</string>
+    <string name="obesidade_dois">obesidade grau II</string>
+    <string name="obesidade_tres">obesidade grau III</string>
+
+</resources>

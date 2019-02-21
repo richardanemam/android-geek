@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/peso_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/peso_label"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/peso_kg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/kilograma"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/peso_label"
+        app:layout_constraintTop_toBottomOf="@+id/peso_label" />
+
+    <SeekBar
+        android:id="@+id/peso_seek"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:max="200"
+        app:layout_constraintEnd_toEndOf="@+id/peso_label"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/peso_kg"
+        app:layout_constraintTop_toTopOf="@+id/peso_kg" />
+
+    <TextView
+        android:id="@+id/altura_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/altura_label"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/peso_label"
+        app:layout_constraintStart_toStartOf="@+id/peso_label"
+        app:layout_constraintTop_toBottomOf="@+id/peso_kg" />
+
+    <TextView
+        android:id="@+id/altura_cm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/centimetro"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/altura_label"
+        app:layout_constraintTop_toBottomOf="@+id/altura_label" />
+
+    <SeekBar
+        android:id="@+id/altura_seek"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:max="280"
+        app:layout_constraintEnd_toEndOf="@+id/peso_label"
+        app:layout_constraintStart_toEndOf="@+id/altura_cm"
+        app:layout_constraintTop_toTopOf="@+id/altura_cm" />
+
+    <TextView
+        android:id="@+id/imc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/imc_label"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/peso_label"
+        app:layout_constraintStart_toStartOf="@+id/peso_label"
+        app:layout_constraintTop_toBottomOf="@+id/altura_cm" />
+
+
+    <TextView
+        android:id="@+id/imc_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/imc_status"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/peso_label"
+        app:layout_constraintStart_toStartOf="@+id/peso_label"
+        app:layout_constraintTop_toBottomOf="@+id/imc" />
+
+</android.support.constraint.ConstraintLayout>
