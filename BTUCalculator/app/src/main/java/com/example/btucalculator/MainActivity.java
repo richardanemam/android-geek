@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView btu;
     private SeekBar areaSeek;
     private SeekBar pessoasSeek;
-    private RadioButton sixRadio;
-    private RadioButton nineRadio;
     private int btuValue = 0;
 
     @Override
@@ -39,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
         btu = findViewById(R.id.btu);
         areaSeek = findViewById(R.id.area_seek);
         pessoasSeek = findViewById(R.id.people_seek);
-        sixRadio = findViewById(R.id.rb_six_hundred);
-        nineRadio = findViewById(R.id.rb_nine_hundred);
     }
 
     private void init() {
