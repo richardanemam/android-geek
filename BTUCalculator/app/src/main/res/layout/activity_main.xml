@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/area_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/area_label"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/area_metro_quadrado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/area"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/area_label"
+        app:layout_constraintTop_toBottomOf="@+id/area_label" />
+
+    <SeekBar
+        android:id="@+id/area_seek"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:max="200"
+        app:layout_constraintEnd_toEndOf="@+id/area_label"
+        app:layout_constraintStart_toEndOf="@+id/area_metro_quadrado"
+        app:layout_constraintTop_toTopOf="@+id/area_metro_quadrado" />
+
+    <TextView
+        android:id="@+id/pessoas_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/pessoas_label"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/area_label"
+        app:layout_constraintStart_toStartOf="@+id/area_label"
+        app:layout_constraintTop_toBottomOf="@+id/area_metro_quadrado" />
+
+    <TextView
+        android:id="@+id/quantidade_pessoas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/qtd_pessoas"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/pessoas_label"
+        app:layout_constraintTop_toBottomOf="@+id/pessoas_label" />
+
+    <SeekBar
+        android:id="@+id/people_seek"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:max="280"
+        app:layout_constraintEnd_toEndOf="@+id/area_label"
+        app:layout_constraintStart_toEndOf="@+id/quantidade_pessoas"
+        app:layout_constraintTop_toTopOf="@+id/quantidade_pessoas" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/area_label"
+        app:layout_constraintTop_toBottomOf="@id/people_seek">
+
+        <RadioButton
+            android:id="@+id/rb_six_hundred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:padding="8dp"
+            android:text="@string/btu_six_hundred"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rb_nine_hundred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:padding="8dp"
+            android:text="@string/btu_nine_hundred"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/btu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/btu_label"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/area_label"
+        app:layout_constraintStart_toStartOf="@+id/area_label"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+
+</android.support.constraint.ConstraintLayout>

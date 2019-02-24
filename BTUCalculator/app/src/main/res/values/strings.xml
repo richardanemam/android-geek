@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BTU Calculator</string>
+    <string name="area_label">Área</string>
+    <string name="area">m²</string>
+    <string name="pessoas_label">Pessoas</string>
+    <string name="qtd_pessoas">P</string>
+    <string name="btu_label">BTU</string>
+    <string name="btu_six_hundred">600</string>
+    <string name="btu_nine_hundred">900</string>
+    <string name="definir_valores">Por favor, defina os valores de área e altura corretamente</string>
+    <string name="progress_people">%1$d P</string>
+    <string name="progress_area">%1$d m²</string>
+    <string name="btu_value">%1$d BTU</string>
+</resources>

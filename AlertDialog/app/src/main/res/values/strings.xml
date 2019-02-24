@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Show My Dialog</string>
     <string name="show_the_dialog">show dialog</string>
-
+    <string name="titulo">ATENÇÃO</string>
+    <string name="texto">muito obrigado pela a atenção</string>
+    <string name="entendi">ok, entendi</string>
 </resources>
