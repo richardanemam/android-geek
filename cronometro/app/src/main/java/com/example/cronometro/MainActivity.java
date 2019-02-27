@@ -1,8 +1,8 @@
 package com.example.cronometro;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
     @Override
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         toggleStartStop();
         startResetButton();
     }
-
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -63,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
     private void reset(){
         elapsedTime = 0;
         updateTime();
-        //runTimer();
     }
 
     private void updateTime(){
@@ -78,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(startStopBtn.getText().equals("start")) {
-                    // updateTime();
-                    //runTimer();
                     handler.postDelayed(timer, 0);
                     startStopBtn.setText(R.string.btn_stop);
                 } else {
