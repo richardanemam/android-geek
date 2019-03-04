@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="add_contact">Create Contact</string>
+    <string name="email_label">Email</string>
+    <string name="address_label">Endereço</string>
+    <string name="business_phone">Telefone Comercial</string>
+    <string name="home_phone">Telefone Residencial</string>
+    <string name="show_contact_info">Exibir Contato</string>
+    <string name="save_button">salvar</string>
+    <string name="name_input">Nome</string>
+</resources>
