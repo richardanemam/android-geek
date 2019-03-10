@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">IntentResultDemo</string>
+    <string name="pick_photo_message">Pick a photo</string>
+</resources>

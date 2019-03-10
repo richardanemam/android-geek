@@ -10,4 +10,7 @@
     <color name="primaryLightColor">#718792</color>
     <color name="primaryDarkColor">#1c313a</color>
     <color name="primaryTextColor">#ffffff</color>
+
+    <!--RED-->
+    <color name="rec_FF0000">#FF0000</color>
 </resources>
