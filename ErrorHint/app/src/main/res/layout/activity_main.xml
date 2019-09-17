@@ -8,36 +8,68 @@
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/til_hint"
-        android:theme="@style/TextInputLayoutAppearance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="16dp"
+        android:theme="@style/TextInputLayoutAppearance"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="email"/>
+            android:hint="email"
+            android:inputType="textEmailAddress" />
 
     </android.support.design.widget.TextInputLayout>
+
+    <!--Possível não boa prática-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/teste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/clique_aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_hint">
+
+        <RadioGroup
+            android:id="@+id/radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/primeiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Primeiro" />
+
+            <RadioButton
+                android:id="@+id/segundo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="segundo" />
+        </RadioGroup>
+    </android.support.design.widget.TextInputLayout>
+
 
     <Button
         android:id="@+id/clique_aqui"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
         android:background="@color/colorPrimary"
         android:text="CLIQUE AQUI"
-        app:layout_constraintTop_toBottomOf="@id/til_hint"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/teste" />
 
 </android.support.constraint.ConstraintLayout>

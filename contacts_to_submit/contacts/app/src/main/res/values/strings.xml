@@ -6,6 +6,8 @@
     <string name="business_phone">Telefone Comercial</string>
     <string name="home_phone">Telefone Residencial</string>
     <string name="show_contact_info">Exibir Contato</string>
+    <string name="create_contact">Criar Contato</string>
     <string name="save_button">salvar</string>
     <string name="name_input">Nome</string>
+    <string name="remove">Remover Contato</string>
 </resources>

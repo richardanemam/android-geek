@@ -2,9 +2,15 @@ package com.example.contacts.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.contacts.R;
+import com.example.contacts.model.ContactDao;
+import com.example.contacts.model.ContactModel;
+
+import java.util.List;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -13,25 +19,15 @@ import androidx.appcompat.widget.Toolbar;
 
 public class ShowContactInfoActivity extends AppCompatActivity {
 
-    private static final String NAME = "name";
-    private static final String EMAIL = "email";
-    private static final String ADDRESS = "address";
-    private static final String BUSINESS_PHONE = "businessPhone";
-    private static final String HOME_PHONE = "homePhone";
+    private static final String POSITION = "position";
 
-    private String contactName;
-    private String contactEmail;
-    private String contactAddress;
-    private String contactBusinessPhone;
-    private String contactHomePhone;
+    private int position;
+    private List<ContactModel> contactList;
 
-    public static void addExtras(Intent intent, String nome, String email, String address,
-                                 String businessPhone, String homePhone){
-        intent.putExtra(NAME, nome);
-        intent.putExtra(EMAIL, email);
-        intent.putExtra(ADDRESS, address);
-        intent.putExtra(BUSINESS_PHONE, businessPhone);
-        intent.putExtra(HOME_PHONE, homePhone);
+    private Button remove;
+
+    public static void addExtras(Intent intent, int position) {
+        intent.putExtra(POSITION, position);
     }
 
     @Override
@@ -41,6 +37,7 @@ public class ShowContactInfoActivity extends AppCompatActivity {
         buildToolbar();
         initializeVariables();
         initializeViews();
+        removeContact();
     }
 
     private void buildToolbar(){
@@ -52,11 +49,8 @@ public class ShowContactInfoActivity extends AppCompatActivity {
     }
 
     private void initializeVariables(){
-        contactName = getIntent().getStringExtra(NAME);
-        contactEmail = getIntent().getStringExtra(EMAIL);
-        contactAddress = getIntent().getStringExtra(ADDRESS);
-        contactBusinessPhone = getIntent().getStringExtra(BUSINESS_PHONE);
-        contactHomePhone = getIntent().getStringExtra(HOME_PHONE);
+        position = getIntent().getIntExtra(POSITION, -1);
+        contactList = ContactDao.getInstance().getContactList();
     }
 
     private void initializeViews(){
@@ -66,10 +60,23 @@ public class ShowContactInfoActivity extends AppCompatActivity {
         TextView businessPhone = findViewById(R.id.tv_business_phone);
         TextView homePhone = findViewById(R.id.tv_home_phone);
 
-        name.setText(contactName);
-        email.setText(contactEmail);
-        address.setText(contactAddress);
-        businessPhone.setText(contactBusinessPhone);
-        homePhone.setText(contactHomePhone);
+        name.setText(contactList.get(position).getNome());
+        email.setText(contactList.get(position).getEmail());
+        address.setText(contactList.get(position).getEndereco());
+        businessPhone.setText(contactList.get(position).getTelefoneCom());
+        homePhone.setText(contactList.get(position).getTelefoneRes());
+
+        remove = findViewById(R.id.btn_remove);
     }
+
+    private void removeContact() {
+        remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contactList.remove(position);
+                finish();
+            }
+        });
+    }
+
 }

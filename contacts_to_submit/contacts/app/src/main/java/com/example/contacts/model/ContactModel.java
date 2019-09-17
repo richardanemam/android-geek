@@ -4,14 +4,14 @@ public class ContactModel {
 
     private String nome;
     private String email;
-    private String endereço;
+    private String endereco;
     private String telefoneRes;
     private String telefoneCom;
 
-    public ContactModel(String nome, String email, String endereço, String telefoneCom, String telefoneRes){
+    public ContactModel(String nome, String email, String endereco, String telefoneCom, String telefoneRes) {
         this.nome = nome;
         this.email = email;
-        this.endereço = endereço;
+        this.endereco = endereco;
         this.telefoneCom = telefoneCom;
         this.telefoneRes = telefoneRes;
     }
@@ -24,15 +24,15 @@ public class ContactModel {
         return this.email;
     }
 
-    public String getEndereco(){
-        return this.endereço;
+    public String getEndereco() {
+        return this.endereco;
     }
 
-    public  String getTelefoneCom(){
+    public String getTelefoneCom() {
         return this.telefoneCom;
     }
 
-    public String getTelefoneRes(){
+    public String getTelefoneRes() {
         return this.telefoneRes;
     }
 }
