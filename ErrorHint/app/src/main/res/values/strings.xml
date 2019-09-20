@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Error Hint</string>
+    <string name="email_label">e-mail</string>
 </resources>

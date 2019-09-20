@@ -1,43 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/til_hint"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:theme="@style/TextInputLayoutAppearance"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/email"
+        <TextView
+            android:id="@+id/tv_email_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="email"
-            android:inputType="textEmailAddress" />
+            android:text="@string/email_label"
+            android:labelFor="@id/email"
+            android:textSize="16sp" />
 
-    </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorTextAppearance="@style/ErrorText"
+            app:boxStrokeColor="@color/cinza_505050">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
 
     <!--Possível não boa prática-->
     <android.support.design.widget.TextInputLayout
         android:id="@+id/teste"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/clique_aqui"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_hint">
+        android:layout_marginEnd="16dp">
 
         <RadioGroup
             android:id="@+id/radio"
@@ -58,7 +67,6 @@
         </RadioGroup>
     </android.support.design.widget.TextInputLayout>
 
-
     <Button
         android:id="@+id/clique_aqui"
         android:layout_width="match_parent"
@@ -67,9 +75,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:background="@color/colorPrimary"
-        android:text="CLIQUE AQUI"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teste" />
+        android:text="CLIQUE AQUI" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

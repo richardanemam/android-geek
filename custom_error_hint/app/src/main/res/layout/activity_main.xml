@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionDone"
+        android:maxLines="1"/>
+
+    <com.example.customerrorhint.customcomponent.CustomErrorHint
+        android:id="@+id/hint_error_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_posicao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/primeiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="primeiro"/>
+
+
+        <RadioButton
+            android:id="@+id/segundo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="segundo"/>
+
+    </RadioGroup>
+
+    <com.example.customerrorhint.customcomponent.CustomErrorHint
+        android:id="@+id/hint_error_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_valida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="valida erro"/>
+
+</LinearLayout>

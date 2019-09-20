@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icons8_error_32"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        android:textColor="#551a8b"
+        tools:text="Está errado Richard, tente novamente!"/>
+
+</LinearLayout>
